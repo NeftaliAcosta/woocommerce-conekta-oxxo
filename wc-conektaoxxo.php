@@ -40,7 +40,7 @@ class WC_Conekta_Oxxo_Payment {
     private function __construct() {
         
         // Checks PHP version >= 5.3.
-        if (!function_exists('get_called_class')) {
+        if (function_exists('get_called_class')){
             // Checks with WooCommerce is installed.
             if ( class_exists( 'WC_Payment_Gateway' )  ) {
                 $this->includes();
