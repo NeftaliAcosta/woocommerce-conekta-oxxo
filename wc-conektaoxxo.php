@@ -78,8 +78,8 @@ class WC_Conekta_Oxxo_Payment {
      */
     private function includes() {
         
-        
-        include_once 'classes/lib/conekta/lib/Conekta.php';
+        if (!class_exists('Conekta'))
+            include_once 'classes/lib/conekta/lib/Conekta.php';
         include_once 'classes/wc_conekta_oxxo_gateway.php';
         
     }
